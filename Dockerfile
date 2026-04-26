@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 6. Turn the server on using Railway's specific port
-CMD uvicorn app:app --host 0.0.0.0 --port $PORT
+CMD uvicorn main:app --host 0.0.0.0 --port $PORT
