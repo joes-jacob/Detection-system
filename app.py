@@ -1,4 +1,4 @@
-import os
+
 import io
 import json
 import uuid
@@ -13,7 +13,10 @@ from fastapi.middleware.cors import CORSMiddleware
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+import os
 
+# Get the port from the environment, default to 8000 if not found
+port = int(os.environ.get("PORT", 8000))
 # ==========================================
 # 1. INITIALIZE FASTAPI
 # ==========================================
